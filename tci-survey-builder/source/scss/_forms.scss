@@ -209,11 +209,10 @@ input[type=text], input[type=password], textarea {
 .form__error {
   background: #ffeded;
   color: #fe596b;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: normal;
-  line-height: 20px;
-  text-align: center;
-  padding: 15px;
+  line-height: 16px;
+  padding: 10px 15px;
   border-radius: 3px;
   border: 1px solid #f9e0e3;
   position: relative;
@@ -230,6 +229,14 @@ input[type=text], input[type=password], textarea {
     }
   }
   .error-message {
+  }
+  .error-list {
+    list-style-type: disc;
+    li {
+      padding: 2px 0;
+      list-style-position: inside;
+      display: list-item;
+    }
   }
   .close {
     position: absolute;

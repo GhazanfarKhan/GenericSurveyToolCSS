@@ -151,7 +151,7 @@ $subnav-width : 280px;
       margin: 0 0 15px 0;
       .question-block {
         background: $white;
-        //border-radius: 5px;
+        border-radius: 5px 5px 0 0;
         box-shadow: 0px 0px 4.05px 0.95px rgba(146, 146, 146, 0.2);
         h4 {
           position: relative;
@@ -283,7 +283,6 @@ $subnav-width : 280px;
             font-weight: normal;
             border-left: 2px solid #9cc7f8;
             border-bottom: 1px solid #dbdbdb;
-            cursor: pointer;
             &:before {
               font-family: "Material Icons";
               content: "keyboard_arrow_down";
@@ -338,6 +337,7 @@ $subnav-width : 280px;
               padding: 8px 5px 8px 30px;
               position: relative;
               border-left: none;
+              cursor: move;
               span {
                 position: absolute;
                 left: 6px;
@@ -360,17 +360,19 @@ $subnav-width : 280px;
                 border-top: none;
                 padding: 14px 5px 14px 5px;
               }
-              &.active {
+              &:before {
+                display: none;
+              }
+              &.added {
                 padding-left: 45px;
+                opacity: 0.35;
+                cursor: not-allowed;
                 span {
                   left: 22px;
                   &:before {
                     display: block;
                   }
                 }
-              }
-              &:before {
-                display: none;
               }
             }
             li {

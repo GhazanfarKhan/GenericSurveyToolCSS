@@ -1,0 +1,43 @@
+.sidebar {
+  position: fixed;
+  left: 0px;
+  top: 66px;
+  z-index: 20;
+  width: $leftnav-width;
+  height: 100%;
+  background: $white;
+  border-right: 1px solid #e7eaed;
+  .sidebar-nav {
+    ul {
+      list-style-type: none;
+      li {
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+        color: #d1dce2;
+        a {
+          display: block;
+          color: #d1dce2;
+          &:hover {
+            color: $clr-pri;
+          }
+        }
+        i {
+          font-size: 26px;
+          line-height: 64px;
+        }
+        &.active {
+          a {
+            color: $clr-pri;
+          }
+        }
+        &.disable {
+          opacity: 0.5;
+          i {
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+  }
+}

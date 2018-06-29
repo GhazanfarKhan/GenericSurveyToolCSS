@@ -1,0 +1,115 @@
+// config.scss
+// contains all the required configurations
+
+//@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+// -----------------------------------------------------------------------------------
+// colors
+
+	// Grays
+	$white 					: #fff		!default;
+	$whitelight				: #f1f1f1	!default;
+	$black	 				: #000		!default;
+	$grayLighter 			: #ccd3e4	!default;
+	$grayLight 				: #999999	!default;
+	$grayDark 				: #0d0d0f	!default;
+	$clr-red: #ff0000;
+	$gray 					: #303030;
+	$grayDarker				: #0a0a0c;
+	$marron                 :#441c6d;
+    $social                     :#204399;
+
+	
+	// Theme colors
+	$pink                   : #82bc00;
+	$blue 					: #002e6d	!default;
+	$clr-gray				: #eeeeee !default;
+	$clr-gray-d             : #aaaaaa;
+	$blueDarker 			: #1d315f	!default;
+	$blueDark 				: #333366	!default;
+	$blueLight				: #f9fbff	!default;
+	$blueLighter 			: #f0f4f8	!default;
+	$blueLightest 			: #e3e9f0	!default;
+
+	$bluishGray 			: #666699	!default;
+
+	$notificationBg 		: #fffbcb 	!default;
+	$notification 			: #f83925;
+
+	// Sub colors
+	$borderLight 			: #e2e2e2	!default;
+	$border 				: #cccccc	!default;
+	$bg_progress 			: #b7bcce	!default;
+	//$bg_progress_hover		: $blue;
+
+	// Colors
+	$clr_copy 			: #4d565f;
+	$color_question 		: #303030;
+
+	$color_btnPrimary 		: $bluishGray;
+	$bg_btnPrimary 			: $blueLighter;
+	$color_btnPrimary_hover	: $white;
+	$bg_btnPrimary_hover 	 : $blueDarker;
+
+	$color_btn 				: $gray;
+	$bg_btn					: $blueLight;
+	$color_btn_hover 		: $white;
+	$bg_btn_hover 			: $blueDarker;
+
+	$color_list 			: $grayLight;
+
+
+	$secondary 				: $white;
+
+
+    $clr-pri                : #4ca1fe    !default;
+     $clr-sec                : #1a1a1a   !default;
+    $clr-green              : #9bc559;
+    $primary 				: $clr-pri;
+
+	
+// -----------------------------------------------------------------------------------
+// Paths
+	$path_images 			: '../img' !default;
+	$path_fonts 			: '../fonts' !default;
+
+// -----------------------------------------------------------------------------------
+// Images
+
+
+
+// -----------------------------------------------------------------------------------
+// Responsive
+	$iphone4s				: 'iphone4s';
+	$iphone5s 				: 'iphone5s';
+	$iphone6 				: 'iphone6';
+	$iphone6plus 			: 'iphone6plus';
+	$xs 					: 480px; 					// Default Mobile-first approach
+	$sm 					: 768px;					// Respond Mixin's Default Tablet size
+	$md 					: 992px;					// Medium Desktops and Laptops
+	$lg 					: 1200px;					// Large Screens
+	$mobile_first_approach 	: true !default;			// if set false, the min-width will change to max-width
+	$most_used_device 		: $iphone4s;   				// Values : iphone4s, iphone5s, iphone6, iphone plus
+
+// ------------------------------------------------------------------------------------
+// Containers
+	// overriding bootstrap defaults as per design
+	// $container-sm 			: 950px;
+    $container-sm           : 750px;
+	$container-md 			: 980px;
+	$container-lg 			: 992px;
+
+
+// .container {
+//   @include container-fixed;
+
+//   @media (min-width: $screen-sm-min) {
+//     width: $container-sm;
+//   }
+//   @media (min-width: $screen-md-min) {
+//     width: $container-md;
+//   }
+//   @media (min-width: $screen-lg-min) {
+//     width: $container-lg;
+//   }
+// }

@@ -1,0 +1,38 @@
+/* Survey Builder */
+
+@import 'material-icons'; // material icons
+@import 'config'; // variables declarations
+@import 'mixins';
+
+@import 'engine/foundation';
+
+// structure
+@import 'layout'; // defines the whole layout
+@import 'buttons'; // button
+
+// content
+@import 'typography'; // type styles
+
+@import 'vendor/opensans/open-sans';
+@import 'vendor/bootstrap-select/variables';
+@import 'vendor/bootstrap-select/bootstrap-select';
+@import 'vendor/mcustomscrollbar';
+
+@import 'login';
+@import 'forms';
+@import 'content';
+@import 'header';
+@import 'sidebar';
+@import 'surveys';
+@import 'questions';
+@import 'settings';
+@import 'modal';
+@import 'translation';
+@import 'table';
+@import 'pagination';
+@import 'logic';
+@import 'administration';
+@import 'flags';
+@import 'library';
+@import 'campaign-configuration';
+@import 'pagination';

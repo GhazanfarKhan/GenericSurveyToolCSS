@@ -1,0 +1,105 @@
+.administration-block {
+  background: $white;
+  border-radius: 3px;
+  border: 1px solid #e0e8ec;
+  margin: 0 0 15px 0;
+  .content-header {
+    margin-bottom: 0px;
+    padding: 15px;
+    .actions {
+      padding: 0;
+      .btn {
+        float: none;
+      }
+      > .btn {
+        float: left;
+        margin: 0 0 0 10px;
+      }
+      .search-survey {
+        float: left;
+        margin: 0;
+        input {
+          width: 233spx;
+          height: 32px;
+          border-radius: 3px 0 0 3px;
+          padding: 0 40px 0 15px;
+        }
+        &:after {
+          line-height: 32px;
+        }
+      }
+      div.dropdown-menu {
+        left: auto;
+        right: 0;
+        padding: 7px 10px;
+        min-width: 120px;
+        margin: 4px 0 0;
+        font-size: 12px;
+        border: 1px solid $clr-pri;
+        border-radius: 5px;
+        -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        li {
+          border-top: 1px solid #e5e5e5;
+          &:first-child {
+            border-top: none;
+          }
+          a {
+            padding: 6px 5px;
+            font-size: 12px;
+            &:hover {
+              background: none;
+              color: $clr-pri;
+            }
+          }
+          &.selected {
+            a {
+              background: none;
+              color: $clr-pri;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.contact-list-block {
+  border: 1px solid #dde5eb;
+  border-radius: 5px;
+  margin: 0 0 20px 0;
+  > .content-header {
+    padding: 15px;
+    margin-bottom: 0;
+    input {
+      float: left;
+      margin: 0 10px 0 0;
+    }
+    .btn-group {
+      float: left;
+      margin: 0 10px 0 0;
+      .btn {
+        float: none;
+        margin: 0;
+        .caret {
+          &:before {
+            margin-right: -9px;
+          }
+        }
+      }
+    }
+    .btn {
+      float: left;
+      border-radius: 3px;
+      padding: 5px 10px;
+    }
+    .dropdown-menu {
+      font-size: 12px !important;
+    }
+  }
+  .administration-block {
+    border-radius: 0;
+    border-width: 1px 0 0 0;
+  }
+}

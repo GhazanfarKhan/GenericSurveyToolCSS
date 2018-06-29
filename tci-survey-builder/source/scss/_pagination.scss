@@ -1,0 +1,160 @@
+.pagination-list {
+  font-size: 12px;
+  line-height: 38px;
+  width: 100%;
+  padding: 0;
+  color: #34495e;
+  @include clearfix();
+  .pagination__list {
+    float: left;
+    width: 100%;
+    > li {
+      float: left;
+      width: (100%/3);
+      text-align: center;
+      &:first-child {
+        text-align: left;
+      }
+      &.last--child {
+        text-align: right;
+      }
+      .info {
+        display: inline-block;
+        padding: 0 3px;
+      }
+      input.page-no {
+        width: 45px;
+        height: 38px;
+        padding: 5px 10px;
+        text-align: center;
+      }
+      .page-of {
+        float: left;
+      }
+      .actions {
+        float: left;
+        padding: 0 0 0 20px;
+      }
+      .pagination__btn {
+        float: right;
+        width: 41px;
+        height: 38px;
+        border-radius: 5px;
+        border: 1px solid #d6dade;
+        border-radius: 0 3px 3px 0 ;
+        i {
+          font-size: 16px;
+          line-height: 36px;
+          color: #8c8c8c;
+        }
+
+        &.btn--prev {
+          width: 40px;
+          border-right: none;
+          border-radius: 3px 0 0 3px ;
+        }
+        &.btn--disabled {
+          color: #727272;
+
+        }
+      }
+    }
+  }
+}
+
+//== Pagination
+//
+//##
+
+$pagination-color:                     $clr-pri !default;
+$pagination-bg:                        #fff !default;
+$pagination-border:                    #ddd !default;
+
+$pagination-hover-color:               $white !default;
+$pagination-hover-bg:                  $clr-pri !default;
+$pagination-hover-border:              #ddd !default;
+
+$pagination-active-color:              #fff !default;
+$pagination-active-bg:                 $clr-pri !default;
+$pagination-active-border:             $clr-pri !default;
+
+$pagination-disabled-color:            #ddd !default;
+$pagination-disabled-bg:               #fff !default;
+$pagination-disabled-border:           #ddd !default;
+
+//
+// Pagination (multiple pages)
+// --------------------------------------------------
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 2px 0;
+  border-radius: 3px;
+
+  > li {
+    display: inline; // Remove list-style and block-level defaults
+    > a,
+    > span {
+      position: relative;
+      float: left; // Collapse white-space
+      padding: 10px;
+      line-height: 100%;
+      text-decoration: none;
+      color: $pagination-color;
+      background-color: $pagination-bg;
+      border: 1px solid $pagination-border;
+      margin-left: -1px;
+    }
+    &:first-child {
+      > a,
+      > span {
+        margin-left: 0;
+        @include border-left-radius(3px);
+      }
+    }
+    &:last-child {
+      > a,
+      > span {
+        @include border-right-radius(3px);
+      }
+    }
+  }
+
+  > li > a,
+  > li > span {
+    &:hover,
+    &:focus {
+      z-index: 2;
+      color: $pagination-hover-color;
+      background-color: $pagination-hover-bg;
+      border-color: $pagination-hover-border;
+    }
+  }
+
+  > .active > a,
+  > .active > span {
+    &,
+    &:hover,
+    &:focus {
+      z-index: 3;
+      color: $pagination-active-color;
+      background-color: $pagination-active-bg;
+      border-color: $pagination-active-border;
+      cursor: default;
+    }
+  }
+
+  > .disabled {
+    > span,
+    > span:hover,
+    > span:focus,
+    > a,
+    > a:hover,
+    > a:focus {
+      color: $pagination-disabled-color;
+      background-color: $pagination-disabled-bg;
+      border-color: $pagination-disabled-border;
+      cursor: not-allowed;
+    }
+  }
+}

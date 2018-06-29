@@ -1,0 +1,16 @@
+// typography.scss
+// contains typographiy styles
+//---------------- Custom Selection Colors
+// mozilla firefox */
+::-moz-selection {
+    color: $secondary;
+    background: $primary;
+    text-shadow: none;
+}
+
+// webkit, opera, IE9 */
+::selection {
+    color: $secondary;
+    background: $primary;
+    text-shadow: none;
+}

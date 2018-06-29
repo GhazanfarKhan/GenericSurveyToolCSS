@@ -1,0 +1,45 @@
+.campaign-widget {
+  padding: 10px 0 20px 40px;
+  line-height: 1.5em;
+  font-size: 13px;
+  @include clearfix();
+  .col-left {
+    float: left;
+    width: 40%;
+  }
+  .col-right {
+    float: left;
+    width: 55%;
+  }
+  .row {
+    padding: 3px 0;
+  }
+  strong {
+    font-weight: 600;
+  }
+  .multiple {
+    display: inline-block;
+    input[type=text] {
+      margin: 0 0 0 10px;
+      width: 45px;
+      padding: 7px 10px;
+    }
+  }
+  .date-field {
+    float: none;
+    display: inline-block;
+    margin: 0 5px;
+  }
+  .col {
+    float: left;
+    padding: 0 20px 0 0;
+    input[type=text] {
+      margin: 5px 0;
+    }
+  }
+  &.campaign-protection {
+    .row {
+      padding: 5px 0;
+    }
+  }
+}

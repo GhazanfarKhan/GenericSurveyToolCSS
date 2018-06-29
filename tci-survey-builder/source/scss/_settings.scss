@@ -1,0 +1,126 @@
+.settings-block {
+  background: $white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4.05px 0.95px rgba(146, 146, 146, 0.2);
+  .actions-bar {
+    padding: 20px 5px;
+    i {
+      font-size: 24px;
+    }
+    a {
+      color: #d1dce2;
+      margin: 0 9px;
+      &:hover {
+        color: $clr-pri;
+      }
+    }
+  }
+  .setting-field {
+    width: 100%;
+    padding: 12px;
+    border-top: 1px solid #ebebeb;
+    @include clearfix();
+    label {
+      float: left;
+      font-size: 14px;
+      color: #34495e;
+    }
+    .toggle {
+      float: right;
+      padding: 2px 0 0 10px;
+    }
+    .half-column {
+      float: left;
+      width: 50%;
+    }
+    .btn.dropdown-toggle {
+      font-size: 14px;
+      padding: 5px 35px 5px 15px;
+    }
+    .dropdown-menu {
+      font-size: 14px;
+      padding: 0px;
+      ul {
+        li {
+          .question-no {
+            display: inline-block;
+            width: 30px;
+            color: $clr-pri;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    .question {
+      font-size: 12px;
+      color: #34495e;
+      padding: 0 0 0 30px;
+      position: relative;
+      span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 14px;
+        font-weight: bold;
+        color: $clr-pri;
+      }
+    }
+    .two-digits-select {
+      float: right;
+      margin: -3px 0 0 0;
+      .btn.dropdown-toggle {
+        font-size: 12px;
+        line-height: 19px;
+        padding: 0 5px;
+        color: #34495e;
+        .caret {
+          right: 4px;
+          margin-top: -6px;
+        }
+      }
+      .dropdown-menu  li > a {
+        padding: 5px;
+      }
+    }
+    &:first-child {
+      border-top: none;
+    }
+  }
+  .upload-field {
+    padding: 12px;
+    border-top: 1px solid #ebebeb;
+    font-size: 12px;
+    input {
+      display: none;
+    }
+    .field__label {
+      font-size: 14px;
+      font-weight: normal;
+      padding: 0 0 9px 0;
+      display: block;
+      text-transform: none;
+      color: #34495e;
+    }
+    .field__controls {
+      display: inline-block;
+      vertical-align: middle;
+      label {
+        display: inline-block;
+      }
+      .btn {
+        cursor: pointer;
+        vertical-align: middle;
+        border-radius: 20px;
+      }
+      .file-name {
+        display: block;
+        vertical-align: middle;
+        padding: 9px 0 0 0;
+      }
+    }
+    .field__instructions {
+      color: #b1b9c1;
+      padding: 9px 0 0 0;
+    }
+  }
+}

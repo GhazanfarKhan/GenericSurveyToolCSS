@@ -1,0 +1,60 @@
+.logic-field {
+  text-align: center;
+  color: #34495e;
+  .logic-header {
+    text-transform: uppercase;
+    border-top: 1px solid #ebebeb;
+    border-left: 2px solid $clr-pri;
+    padding: 10px;
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+    &:after {
+      font-family: "Material Icons";
+      content: 'keyboard_arrow_right';
+      font-size: 16px;
+      line-height: 16px;
+      text-transform: lowercase;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      margin: -8px 0 0 0;
+      color: $clr-pri;
+    }
+    &.active {
+      &:after {
+        transform: rotate(0deg);
+      }
+    }
+  }
+  .logic-content {
+    display: none;
+    font-size: 12px;
+    background: #f4f5f9;
+    border-top: 1px solid #ebebeb;
+    border-left: 2px solid #c0deff;
+    padding: 15px;
+    .btn.dropdown-toggle {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    .dropdown-menu {
+      font-size: 12px;
+      padding: 0;
+      margin-top: 3px;
+    }
+    .condition {
+      padding: 6px 0;
+    }
+    .actions {
+      padding: 10px 0 0 0;
+      a {
+        margin: 0 3px;
+        color: $clr-pri;
+        &:hover {
+         color: $clr-sec;
+        }
+      }
+    }
+  }
+}

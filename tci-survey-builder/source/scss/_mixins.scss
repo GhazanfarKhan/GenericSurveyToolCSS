@@ -1,0 +1,179 @@
+// Mixins and examples
+
+
+/* Clearfix
+  ========================================================================== */
+
+@mixin clearfix() {
+    & {
+        *zoom: 1;
+    }
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+
+/* Usage */
+
+/* .article {
+    @include clearfix();
+} */
+
+
+/* Box Model
+  ========================================================================== */
+
+@mixin box-sizing($type: border-box) {
+    box-sizing: #{$type};
+}
+ 
+
+/* Usage */
+
+/* *,
+*:after,
+*:before {
+    @include box-sizing(border-box);
+} */
+
+
+/* Border Radius
+  ========================================================================== */
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */
+}
+
+// Single side border-radius
+@mixin border-top-radius($radius) {
+    -webkit-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
+    -webkit-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
+    background-clip: padding-box;
+}
+
+@mixin border-right-radius($radius) {
+    -webkit-border-bottom-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+    -webkit-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
+    background-clip: padding-box;
+}
+
+@mixin border-bottom-radius($radius) {
+    -webkit-border-bottom-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+    -webkit-border-bottom-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+    background-clip: padding-box;
+}
+
+@mixin border-left-radius($radius) {
+    -webkit-border-bottom-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+    -webkit-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
+    background-clip: padding-box;
+}
+
+
+/* Usage */
+
+/* .button {
+    @include border-radius(5px);
+}
+
+.submit-button {
+    @include border-top-radius(10px);
+} */
+
+
+/* Opacity
+  ========================================================================== */
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+
+/* Usage */
+
+/* .article-heading {
+    @include opacity(0.8);
+}
+ */
+
+
+/* Text overflow
+  ========================================================================== */
+
+@mixin text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* Usage */
+
+/* .text-truncate {
+    @include text-truncate;
+} */
+
+
+
+/* Placeholder
+  ========================================================================== */
+
+@mixin placeholder-color($color) {
+    &.placeholder {
+        color: $color
+    }
+    &:-moz-placeholder {
+        color: $color
+    }
+    &::-webkit-input-placeholder {
+        color: $color
+    }
+    &:-ms-input-placeholder {
+        color: $color
+    }
+}
+
+
+/* Usage */
+/*
+input {
+    @include placeholder-color(#FA4A4A)
+}
+ */
+
+
+ 
+$default-tr-property: all;
+$default-tr-duration: 0.3s;
+$default-tr-function:ease-in-out;
+
+
+
+// Transition:
+@mixin transition ($property: $default-tr-property, $duration: $default-tr-duration, $function: $default-tr-function, $delay: 0s) {
+    transition: $property $duration $function;
+    transition-delay: $delay;
+}
+
+/* Usage */
+
+//@include transition();

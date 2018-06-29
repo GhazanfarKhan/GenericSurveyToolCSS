@@ -1,0 +1,273 @@
+// layout.scss
+// contains layout styles
+
+
+*,
+*:before,
+*:after {
+  @include box-sizing;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  //height: 100%;
+}
+body {
+  //height: 100%;
+}
+button {
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+}
+[contenteditable="true"]:active,
+[contenteditable="true"]:focus{
+  border:none;
+  outline:none;
+}
+body {
+  background: #fafbfd;
+  color: $clr-copy;
+  font-family: 'Open Sans';
+  background-size: cover;
+}
+
+a {
+  color: $clr-copy;
+  &:hover {
+    color: $clr-pri;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+.test {
+  position: relative;
+  background: #ffff00;
+}
+.wrapper {
+  max-width: 667px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 25px;
+  box-shadow: 5px 5px #82bc00;
+  border-radius: 50px;
+  transform: scale(2);
+  background: #ffff00;
+}
+.icon--12 {
+  font-size: 12px !important;
+}
+.icon--16 {
+  font-size: 16px !important;
+}
+.icon--22 {
+  font-size: 22px !important;
+}
+.icon--24 {
+  font-size: 24px !important;
+}
+.icon--26 {
+  font-size: 26px !important;
+}
+.align-center {
+  text-align: center;
+}
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  .tooltiptext {
+    visibility: hidden;
+    min-width: 50px;
+    background-color: #4c5e70;
+    color: #fff;
+    text-align: center;
+    padding: 5px 15px;
+    border-radius: 0 3px 3px 0;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    position: absolute;
+    z-index: 1;
+    left: 64px;
+    top: 50%;
+    margin: -15px 0 0 0;
+    box-shadow: 0px 0px 4.05px 0.95px rgba(146, 146, 146, 0.25);
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      margin-top: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent #4c5e70 transparent transparent;
+    }
+  }
+  &.tooltip--top {
+    .tooltiptext {
+      font-size: 11px;
+      font-weight: normal;
+      line-height: 16px;
+      border-radius: 3px;
+      left: 50%;
+      top: -22px;
+      width: 66px;
+      margin: -10px 0 0 -33px;
+      padding: 3px 5px;
+      &:before {
+        top: 100%;
+        right: auto;
+        left: 50%;
+        margin: 0 0 0 -5px;
+        border-color: #4c5e70 transparent transparent transparent;
+      }
+    }
+  }
+  &:hover {
+    .tooltiptext {
+      visibility: visible;
+    }
+  }
+}
+.pad-right-50 {
+  padding-right: 50px;
+}
+
+.filter-bar {
+  float: right;
+  background: $white;
+  border: 1px solid #e1e1e1;
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #34495e;
+  i {
+    font-size: 16px;
+    line-height: 16px;
+    vertical-align: middle;
+  }
+  a {
+    color: $clr-pri;
+    &:hover {
+      color: $clr-sec;
+    }
+  }
+  .filter-dropdown {
+    position: absolute;
+    right: -3px;
+    top: 100%;
+    z-index: 9;
+    width: 110px;
+    padding: 7px 13px;
+    margin: 11px 0 0 0;
+    font-size: 12px;
+    color: #34495e;
+    background: $white;
+    border: 1px solid $clr-pri;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6.48px 1.52px rgba(146, 146, 146, 0.32);
+
+    transform: translateY(45px);
+    @include transition();
+    visibility: hidden;
+    @include opacity(0);
+    &:before {
+      content: '';
+      position: absolute;
+      right: 12px;
+      top: -5px;
+      width: 9px;
+      height: 9px;
+      background: $white;
+      border: 1px solid $clr-pri;
+      border-width: 1px 0 0 1px;
+      transform: rotate(45deg);
+    }
+    ul {
+      float: left;
+      width: 100%;
+      li {
+        float: left;
+        width: 100%;
+        a {
+          color: #34495e;
+          &:hover, &.active {
+            color: $clr-pri;
+          }
+        }
+        ul {
+          clear: both;
+          li {
+            float: left;
+            width: 25%;
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+    > ul {
+      > li {
+        border-top: 1px solid #e5e5e5;
+        padding: 5px 2px;
+        &:first-child {
+          border-top: none;
+          color: #a9b4bd;
+        }
+      }
+    }
+    &.active {
+      transform: translateY(0);
+      @include opacity(1);
+      visibility: visible;
+    }
+    &.filter-options {
+      width: 450px;
+      right: 9px;
+    }
+  }
+  .filter-name {
+    float: left;
+    min-width: 160px;
+    padding: 7px 19px 7px 14px;
+    border-right: 1px solid #e1e1e1;
+    position: relative;
+    i {
+      float: right;
+    }
+  }
+  .action-btns {
+    float: left;
+    padding: 6px 10px 7px;
+    border-right: 1px solid #e1e1e1;
+    a {
+      margin: 0 5px;
+    }
+  }
+  .filter-dropdown-node {
+    float: left;
+    position: relative;
+    > a {
+      display: block;
+      color: $white;
+      padding: 6px 6px 7px;
+      background: $clr-pri;
+      border-radius: 0 3px 3px 0;
+    }
+  }
+}

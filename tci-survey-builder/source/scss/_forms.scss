@@ -1,0 +1,246 @@
+// Form styles label, inputs, etc
+
+.form {
+  position: relative;
+
+  fieldset {
+    border: 0;
+    margin: 0;
+  }
+}
+input, textarea, select, button {
+  outline: none;
+}
+
+input:focus, textarea:focus, select:focus {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(119, 119, 119, 0.25);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(119, 119, 119, 0.25);
+  box-shadow: 0px 0px 5px 0px rgba(119, 119, 119, 0.25);
+}
+
+input[type=text], input[type=password], input[type=date], input[type=number] {
+  border: 1px solid #e1e1e1;
+  padding: 7px 15px;
+  background: $white;
+  font-size: 12px;
+  font-family: inherit;
+  color: #34495e;
+  border-radius: 3px;
+  &.error {
+    border-color: #fe596e;
+  }
+}
+.search-field, .date-field {
+  float: left;
+  position: relative;
+  &:before {
+    content: 'search';
+    font-family: "Material Icons";
+    font-size: 18px;
+    color: #8c8c8c;
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    margin: -9px 0 0 0;
+  }
+  input {
+    padding-left: 30px;
+    width: 170px;
+  }
+}
+.date-field {
+  &:before {
+    content: 'insert_invitation';
+    color: #d1dce2;
+
+  }
+  input[type=text] {
+    width: 130px;
+  }
+  input[type=date] {
+    padding:4px 15px 4px 30px;
+  }
+}
+textarea {
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  background: $white;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 125%s;
+  color: #34495e;
+  padding: 8px 18px;
+  min-height: 72px;
+  resize: none;
+  border-radius: 3px;
+}
+.custom-checkbox {
+  display: inline-block;
+  > label {
+    font-size: 14px;
+  }
+
+  input[type=checkbox]:not(old) {
+    width: 2em;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    opacity: 0;
+    display: none;
+  }
+
+  input[type=checkbox]:not(old) ~ label {
+    display: inline-block;
+    margin-left:0;
+    line-height: 1.5em;
+    font-size: 13px;
+    color: #546a79;
+    cursor: pointer;
+  }
+
+  input[type=checkbox]:not(old) ~ label > span:first-child {
+    display: inline-block;
+    border: 1px solid #d6dade;
+    border-radius: 0;
+    background: $white;
+    vertical-align: bottom;
+    line-height: 14px;
+    position: relative;
+    width: 14px;
+    height: 14px;
+    margin: 0 8px 0 0;
+    top: -3px;
+  }
+
+  input[type=checkbox]:not(old):checked ~ label > span:first-child:before {
+    content: "done";
+    display: block;
+    font-family: "Material Icons";
+    color: $clr-pri;
+    text-align: center;
+    font-size: 10px;
+    line-height: 12px;
+    -webkit-text-stroke: 1px $clr-pri;
+  }
+}
+
+//Toggle Checkbox
+.toggle {
+  input {
+    position: absolute;
+    left: -9999px
+  }
+  .toggle__switch {
+    position: relative;
+    display: block;
+    width: 27px;
+    height: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 350ms;
+    background:#bdc2c6;
+    &:after {
+      position: absolute;
+      content: '';
+      width: 11px;
+      height: 11px;
+      top: 2px;
+      left: 2px;
+      border-radius: 50%;
+      transition: 250ms ease-in-out;
+      background: $white;
+    }
+  }
+  input:checked + .toggle__switch {
+    background:$clr-pri;
+    &::after {
+      left:14px;
+    }
+  }
+}
+
+//Upload field
+.upload-field {
+  font-size: 12px;
+  clear: both;
+  input {
+    display: none;
+  }
+  .field__label {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 0 30px;
+    display: block;
+  }
+  .field__controls {
+    display: inline-block;
+    vertical-align: middle;
+    label {
+      display: inline-block;
+    }
+    .btn {
+      text-transform: capitalize;
+      cursor: pointer;
+      padding: 8px 20px;
+      vertical-align: middle;
+      border-radius: 20px;
+    }
+    .file-name {
+      vertical-align: middle;
+      padding: 0 0 0 8px;
+    }
+  }
+  .field__instructions {
+    color: #b1b9c1;
+    padding: 4px 0 0 0;
+  }
+}
+input[type=text].two-digits {
+  width: 42px;
+  padding: 7px 10px;
+}
+
+input[type=text], input[type=password], textarea {
+  &.error {
+    border-color: #fe596b !important;
+  }
+}
+
+.form__error {
+  background: #ffeded;
+  color: #fe596b;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 3px;
+  border: 1px solid #f9e0e3;
+  position: relative;
+  .error-heading {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    padding: 0 0 10px 0;
+    i {
+      font-size: 24px;
+      line-height: 20px;
+      vertical-align: top;
+      margin: 0 5px 0 0;
+    }
+  }
+  .error-message {
+  }
+  .close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    a {
+      color: #fe596b;
+    }
+    i {
+      font-size: 14px;
+    }
+  }
+}
+

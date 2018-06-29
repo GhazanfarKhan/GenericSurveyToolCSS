@@ -1,0 +1,151 @@
+.my-surveys {
+  .survey-block {
+    background: $white;
+    border: 1px solid #e0e8ec;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    padding: 15px 30px;
+    display: table;
+    width: 100%;
+    &:hover, &.active {
+      border-color: #c9d0d4;
+      box-shadow: -1.259px 1.554px 6.48px 1.52px rgba(146, 146, 146, 0.11);
+    }
+    p {
+      color: #a9b4bd;
+      padding: 3px 0;
+    }
+    a {
+      color: $clr-pri;
+      &:hover {
+        color: $clr-sec;
+      }
+    }
+    .col-left {
+      display: table-cell;
+      width: 30%;
+    }
+    .col-right {
+      display: table-cell;
+      width: 70%;
+      text-align: right;
+      vertical-align: middle;
+      font-weight: 600;
+    }
+    .name {
+      position: relative;
+      padding: 0 0 0 60px;
+      .number {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin: -18px 0 0 0;
+        color: $clr-pri;
+        font-size: 16px;
+        line-height: 34px;
+        font-weight: 600;
+        text-align: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 5px;
+        border: 1px solid $clr-pri;
+      }
+      .details {
+        padding: 4px 0 0 0;
+        h4 {
+          font-size: 16px;
+          color: #34495e;
+        }
+      }
+    }
+    .inline-block {
+      display: inline-block;
+      text-align: center;
+      padding: 0 25px;
+      vertical-align: middle;
+    }
+    .created-by {
+
+    }
+    .date-created {
+
+    }
+    .end-date {
+
+    }
+    .responses {
+
+    }
+    .actions {
+      padding: 7px 0 0 0;
+      i {
+        font-size: 16px;
+        line-height: 30px;
+      }
+      a {
+        display: inline-block;
+        margin: 0 0 0 10px;
+        color: #cdd4d8;
+        width: 32px;
+        height: 32px;
+        border: 1px solid #cdd4d8;
+        border-radius: 5px;
+        &:hover {
+          color: $clr-pri;
+          border-color: $clr-pri;
+        }
+      }
+    }
+  }
+  .contact-list-header {
+    padding-left: 70px;
+    position: relative;
+    .toggle {
+      position: absolute;
+      left: 24px;
+      top: 30px;
+      width: 20px;
+      height: 20px;
+      border: 2px solid $clr-pri;
+      border-radius: 2px;
+      cursor: pointer;
+      &:before {
+        content: 'add';
+        position: absolute;
+        left: -1px;
+        top: -1px;
+        font-size: 18px;
+        line-height: 18px;
+        font-family: "Material Icons";
+        color: $clr-pri;
+      }
+    }
+    &.active {
+      .toggle {
+        &:before {
+          content: 'remove';
+        }
+      }
+    }
+  }
+  .contact-list-expandable {
+    padding: 0 0 0 75px;
+    display: none;
+  }
+}
+
+
+.norecords-block {
+  background: $white;
+  border: 1px solid #e0e8ec;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 15px 30px;
+  text-align: center;
+  p {
+    padding: 2px 0;
+  }
+}
